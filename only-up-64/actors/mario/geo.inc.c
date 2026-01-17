@@ -1,5 +1,3 @@
-#include "src/game/envfx_snow.h"
-
 const GeoLayout mario_001_switch_opt0_000_switch_opt1_switch_face_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
@@ -1082,6 +1080,9 @@ const GeoLayout mario_geo[] = {
 				GEO_ASM((LAYER_TRANSPARENT << 2) | 1, geo_mirror_mario_backface_culling),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_ALPHA, mario_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
